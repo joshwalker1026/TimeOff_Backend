@@ -11,12 +11,15 @@ import javax.persistence.*;
 @NoArgsConstructor
 @RequiredArgsConstructor
 @Entity
+@Table(name = "certificate")
 public class Certificate {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "certificate_id", unique = true, nullable = false)
     private Long certificateId;
     @NonNull
+    @Column(name = "name", unique = true, nullable = false, length = 50)
     private String name;
     @ManyToOne
     @JoinColumn(name = "skill_id")

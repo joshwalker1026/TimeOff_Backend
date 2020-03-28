@@ -12,10 +12,12 @@ import java.util.Date;
 @NoArgsConstructor
 @RequiredArgsConstructor
 @Entity
+@Table(name = "exam_info")
 public class ExamInfo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "exam_id", unique = true, nullable = false)
     private Long examId;
     @ManyToOne
     @JoinColumn(name = "certificate_id")
@@ -26,8 +28,10 @@ public class ExamInfo {
     @NonNull
     private Vendor vendor;
     @NonNull
+    @Column(name = "exam_date")
     private Date examDate;
     @NonNull
+    @Column(name = "publish_date")
     private Date publishDate;
 
 }

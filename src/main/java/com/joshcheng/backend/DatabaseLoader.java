@@ -15,10 +15,10 @@ public class DatabaseLoader implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        Member member = new Member("michael@gmail.com", "abc12345", "michael", "jordan");
-        memberRepository.save(member);
-        member = new Member("Ian2@gmail.com", "2222222", "Ian", "Lo");
-        memberRepository.save(member);
+//        Member member = new Member("michael@gmail.com", "abc12345", "michael", "jordan");
+//        memberRepository.save(member);
+//        member = new Member("Ian2@gmail.com", "2222222", "Ian", "Lo");
+//        memberRepository.save(member);
     }
 
 }

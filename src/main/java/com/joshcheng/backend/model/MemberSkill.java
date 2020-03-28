@@ -11,10 +11,12 @@ import javax.persistence.*;
 @NoArgsConstructor
 @RequiredArgsConstructor
 @Entity
+@Table(name = "member_skill")
 public class MemberSkill {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "member_skill_id", unique = true, nullable = false)
     private Long memberSkillId;
     @ManyToOne
     @JoinColumn(name = "mid")
